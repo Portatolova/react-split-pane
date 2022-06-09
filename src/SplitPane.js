@@ -347,7 +347,7 @@ class SplitPane extends Component {
   }
 
   render() {
-    const { children, className, split } = this.props;
+    const { children, className, split, resizerClassName } = this.props;
     const notNullChildren = removeNullChildren(this.props.children)
     const sizes = this.getSizes();
     const resizersSize = this.getResizersSize(notNullChildren);
@@ -377,6 +377,7 @@ class SplitPane extends Component {
       } else {
         const resizer = (
           <Resizer
+            className={resizerClassName}
             index={resizerIndex}
             key={`Resizer-${resizerIndex}`}
             split={split}
