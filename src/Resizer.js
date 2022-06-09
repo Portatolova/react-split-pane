@@ -63,6 +63,7 @@ class Resizer extends Component {
       onMouseDown = () => {},
       onTouchEnd = () => {},
       onTouchStart = () => {},
+      className = {}
     } = this.props;
 
     const props = {
@@ -90,6 +91,7 @@ class Resizer extends Component {
           onDoubleClick(event, index);
         }
       },
+      className
     };
 
     return split === 'vertical' ? (
